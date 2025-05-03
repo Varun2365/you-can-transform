@@ -1,10 +1,30 @@
 const express = require('express')
-const os = require('os')
+const os = require('os');
+const mongoose = require('mongoose');
 const app = express();
-app.listen(80, ()=>{
-    console.log("App Listening on port 8000")
-})
+const connectDB = require('./config/db');
+const coachAuthSchema = require('./schema/CoachAuthSchema');
+const loginRouter = require('./routes/authRoute')
+const otpRouter = require('./routes/otpGenerator');
+const coachProfileRouter= require('./routes/coachProfile');
+const PORT = 80;
 
-app.get('/', (req, res)=>{
-    res.send("VPS STARTED " + os.cpus()[0]['model'] + " " +os.cpus().length);
+// Connecting to the mongoDB
+connectDB();
+
+app.use(express.json());
+
+
+app.use('/api/auth',loginRouter);
+app.use('/', coachProfileRouter);
+app.use('/', otpRouter);
+
+// Defining the collections
+
+
+
+
+// Listening the app
+app.listen(PORT, ()=>{
+    console.log(`App Listening on ${PORT}`)
 })

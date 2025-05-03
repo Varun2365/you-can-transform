@@ -1,0 +1,75 @@
+
+
+{
+
+  "coachId": "6123456789abcdef01234567",     // mbjj bwlw hzzc fjpe
+  "name": "John Smith",
+  "email": "john.smith@example.com",
+  "mobile": "+1-555-123-4567",
+  "headline": "Certified Personal Trainer",
+  "bio": "Experienced fitness coach specializing in weight loss and strength training.",
+  "specializations": ["Weight Loss", "Strength Training", "Nutrition"],
+  "certifications": ["ACE Certified Personal Trainer", "NASM Certified Nutrition Coach"],
+  "experienceYears": 10,
+  "profilePicture": "https://example.com/john-smith.jpg",
+  "gallery": [
+    "https://example.com/gallery/image1.jpg",
+    "https://example.com/gallery/image2.jpg"
+  ],
+  "videoEmbedUrl": "https://www.youtube.com/embed/your-video-id",
+  "leadMagnets": [
+    {
+      "title": "Free Workout Plan",
+      "description": "7-day workout plan to get started.",
+      "fileUrl": "https://example.com/downloads/workout-plan.pdf",
+      "coverImage": "https://example.com/downloads/workout-plan-cover.jpg"
+    },
+    {
+      "title": "Nutrition Guide",
+      "description": "A comprehensive guide to healthy eating.",
+      "fileUrl": "https://example.com/downloads/nutrition-guide.pdf",
+      "coverImage": "https://example.com/downloads/nutrition-guide-cover.jpg"
+    }
+  ],
+  "bookingOptions": {
+    "isEnabled": true,
+    "bookingLink": "https://calendly.com/johnsmithfitness",
+    "availableSlots": [
+      {
+        "dayOfWeek": "Monday",
+        "startTime": "09:00",
+        "endTime": "17:00"
+      },
+      {
+        "dayOfWeek": "Wednesday",
+        "startTime": "11:00",
+        "endTime": "19:00"
+      },
+      {
+        "dayOfWeek": "Friday",
+        "startTime": "09:00",
+        "endTime": "17:00"
+      }
+    ]
+  },
+  "subCoaches": [
+    "6123456789abcdef01234568", // Example Coach ID of a sub-coach
+    "6123456789abcdef01234569"  // Another sub-coach ID
+  ],
+  "paymentDetails": {
+    "paymentMethod": "stripe",
+    "accountDetails": {
+      "stripeCustomerId": "cus_XXXXXXXXXXXXXXXX"
+    }
+  },
+  "internalNotes": "Preferred contact method: WhatsApp",
+  "availabilityStatus": "available",
+  "programsOffered": [
+    "6123456789abcdef01234570", // Example Program ID
+    "6123456789abcdef01234571"
+  ],
+  "assignedLeads": [
+    "6123456789abcdef01234572", // Example Lead ID
+    "6123456789abcdef01234573"
+  ]
+}
