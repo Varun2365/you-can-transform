@@ -20,7 +20,9 @@ app.use('/api/auth',loginRouter);
 app.use('/', coachProfileRouter);
 app.use('/', otpRouter);
 app.use('/', uploadRouter);
-
+app.get('/', (req, res)=>{
+    res.send(`OS : ${os.hostname}\nCPU: ${os.cpus()[0]['model']}\nCores:${os.cpus().length}\n<h1>You Can Transform!</h1>`)
+})
 // Defining the collections
 
 
