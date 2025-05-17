@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const coachAuthSchema = require('../schema/CoachAuthSchema'); // Assuming your schema is in '../models'
 
 // Create the CoachAuth model
-const CoachAuthCollection = mongoose.model("CoachAuth", coachAuthSchema, "CoachAuth");
+const CoachAuthCollection = mongoose.model('CoachAuth', coachAuthSchema);
 
 // Routes for Login Action
 router.get('/login', (req, res) => {

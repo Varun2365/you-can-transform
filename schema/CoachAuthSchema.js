@@ -9,4 +9,6 @@ const coachAuthSchema = new mongoose.Schema({
     updatedAt: { type: Date, default: Date.now },
 });
 
+
+
 module.exports = coachAuthSchema;

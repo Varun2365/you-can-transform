@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const coachPortfolioSchema = new Schema({
     coach: {
         type: Schema.Types.ObjectId,
-        ref: 'Coach', // Link to the main Coach model
+        ref: 'CoachAuth', // Link to the main Coach model
         required: true,
         unique: true // One portfolio per coach
     },
@@ -76,6 +76,6 @@ coachPortfolioSchema.pre('save', function(next) {
     next();
 });
 
-const CoachPortfolio = mongoose.model('CoachPortfolio', coachPortfolioSchema);
+const CoachPortfolio = mongoose.model('CoachPortfolio', coachPortfolioSchema, 'CoachPortfolio');
 
 module.exports = CoachPortfolio;

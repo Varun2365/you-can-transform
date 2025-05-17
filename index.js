@@ -2,12 +2,13 @@ const express = require('express')
 const os = require('os');
 const mongoose = require('mongoose');
 const app = express();
-const connectDB = require('./config/db');
+const  connectDB = require('./config/db');
 const coachAuthSchema = require('./schema/CoachAuthSchema');
 const loginRouter = require('./routes/authRoute')
 const otpRouter = require('./routes/otpGenerator');
 const coachProfileRouter= require('./routes/coachProfile');
-const PORT = 80;
+const uploadRouter = require('./routes/fileUpload');
+const PORT = 8000;
 
 // Connecting to the mongoDB
 connectDB();
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use('/api/auth',loginRouter);
 app.use('/', coachProfileRouter);
 app.use('/', otpRouter);
+app.use('/', uploadRouter);
 
 // Defining the collections
 
